@@ -1,0 +1,18 @@
+.onScrollNav{
+    background-color: rgba(232, 15, 15, 0.218);
+    backdrop-filter: blur(60px);
+    width: 98%;
+    border-radius:40px;
+    margin-top: 10px;
+    padding:10px 20px ;
+
+
+}
+nav{
+    transition: .2s all linear;
+
+}
+.navbar a{
+    color: white !important;
+
+}
