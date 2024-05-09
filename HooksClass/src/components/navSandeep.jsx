@@ -1,6 +1,10 @@
-import React from 'react'
+import React ,{useState} from 'react'
 
 export const NavSandeep = () => {
+    const [darkMode, setDarkMode] = useState(false)
+    function fun(){
+        setDarkMode(!darkMode)
+    }
 window.onscroll = () => {
     let nav = document.querySelector('.navbar');
     if(nav && window.scrollY >  20){
@@ -15,7 +19,7 @@ window.onscroll = () => {
 
   return (
     <div>
-    <nav className="navbar navbar-expand-sm fixed-top  " >
+    <nav className={` navbar navbar-expand-sm fixed-top  ${darkMode && window.scrollY > 20 ? 'onScrollNav': ''}`} >
   <a className="navbar-brand" href="#">Navbar</a>
   <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation" />
   <div className="collapse navbar-collapse" id="collapsibleNavId">
@@ -34,12 +38,14 @@ window.onscroll = () => {
         </div>
       </li>
     </ul>
-    <form className="d-flex my-2 my-lg-0">
-      <input className="form-control me-sm-2" type="text" placeholder="Search" />
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
+    
+    
+ <div className="form-check form-switch">
+  <input onClick={fun} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
+
+
   </div>
 </nav>
 
