@@ -4,20 +4,21 @@ import { useState } from "react";
 export const Todolist = () => {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState("");
+  const [dueDate, setDueDate] = useState(""); // Add a state for the due date
 
-  const addtodoFun = () => {
-    if(newTodo.trim()){
-        setTodos([...todos, newTodo]);
-        setNewTodo("");
+  const addTodoFun = () => {
+    if (newTodo.trim()) {
+      setTodos([...todos, { text: newTodo, dueDate }]); // Add the due date to the todo object
+      setNewTodo("");
+      setDueDate(""); // Reset the due date after adding the todo
     }
-   
   };
- 
-  const removetodoFun = (kuchnaam) => {
-      const newTodos = [...todos];
-      newTodos.splice(kuchnaam,1)
-      setTodos(newTodos)
-  }
+
+  const removeTodoFun = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
 
   return (
     <div>
@@ -29,23 +30,26 @@ export const Todolist = () => {
           onChange={(element) => setNewTodo(element.target.value)}
           placeholder="Enter your tasks..."
         />
-        <button onClick={addtodoFun} className="btn btn-success ms-3">
-          Add{" "}
+        <input
+          type="date"
+          value={dueDate}
+          onChange={(element) => setDueDate(element.target.value)}
+        />
+        <button onClick={addTodoFun} className="btn btn-success ms-3">
+          Add
         </button>
-
         <ol>
-
-      { todos.map((todo,index) => (
-        <li key={index}>{todo}
-
-        <button className="btn btn-danger" onClick={ () =>removetodoFun(index) }>Delete</button>
-        {/* <button onClick={removetodoFun(index)}>Delete</button> */}
-
-        {/* <i onClick={removetodoFun} className="fa-solid fa-trash" style={{color:'red'}} /> */}
-
-        </li> 
-        ))}
-          
+          {todos.map((todo, index) => (
+            <li key={index}>
+              {todo.text} (Due: {todo.dueDate})
+              <button
+                className="btn btn-danger"
+                onClick={() => removeTodoFun(index)}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
         </ol>
       </div>
     </div>
