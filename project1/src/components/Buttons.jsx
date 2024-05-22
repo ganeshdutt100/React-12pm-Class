@@ -5,7 +5,8 @@ export const Buttons = () => {
    
 
   return (
-    <div className=' ' style={{height:'100vh' ,backgroundColor:color}} >
+    <div className=' ' style={{height:'5
+0vh' ,backgroundColor:color}} >
 
 
 

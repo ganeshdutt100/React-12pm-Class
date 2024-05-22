@@ -1,8 +1,10 @@
 import { useState } from 'react'
 
 import './App.css'
-import { Buttons } from './components/Buttons'
+// import { Buttons } from './components/Buttons'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Sec1 } from './components/Sec1';
+import { Game } from './components/Game';
 
 function App() {
   const[dark,setDark] = useState(false);
@@ -20,7 +22,10 @@ function App() {
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{dark? 'Dark mode Enable' : 'Light Mode Enable'}</label>
 </div>
 
-      <Buttons/>
+      {/* <Buttons/> */}
+
+   
+      <Game/>
 
     </div>
   )
