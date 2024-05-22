@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import  {useState} from 'react'
 
 export const Game = () => {
  const gameChoice = ['rock','paper','scissor'];
@@ -30,7 +30,7 @@ export const Game = () => {
     setresult('Computer win!')
   }
      }
-
+     
     
   return (
     <div>
