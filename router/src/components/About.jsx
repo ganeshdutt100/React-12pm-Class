@@ -37,6 +37,33 @@ export const About = () => {
 </div>
 
             </div>
+
+            
+ <div className="container">
+  <div className="row">
+    <div className="col">
+      <video src="https://v1.cdnpk.net/videvo_files/video/free/video0543/large_preview/_import_631d7c0a643de6.15717735.mp4" controls width={300} height={300}></video>
+    </div>
+    <div className="col">
+      <video src="https://v1.cdnpk.net/videvo_files/video/free/video0543/large_preview/_import_631d7c0a643de6.15717735.mp4" controls width={300} height={300} ></video>
+    </div>
+    <div className="col">
+      <video src="https://v1.cdnpk.net/videvo_files/video/free/video0543/large_preview/_import_631d7c0a643de6.15717735.mp4" controls width={300} height={300}></video>
+    </div>
+  </div>
+  <div className="row">
+    <div className="col">
+      <video src="https://v1.cdnpk.net/videvo_files/video/free/video0543/large_preview/_import_631d7c0a643de6.15717735.mp4" controls width={300} height={300}></video>
+    </div>
+    <div className="col">
+      <video src="https://v1.cdnpk.net/videvo_files/video/free/video0543/large_preview/_import_631d7c0a643de6.15717735.mp4" controls width={300} height={300} ></video>
+    </div>
+    <div className="col">
+      <video src="https://v1.cdnpk.net/videvo_files/video/free/video0543/large_preview/_import_631d7c0a643de6.15717735.mp4" controls width={300} height={300}></video>
+    </div>
+  </div>
+ </div>
+
         </div>
     
   )

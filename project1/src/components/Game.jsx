@@ -13,7 +13,7 @@ export const Game = () => {
 
         const comChoice =  gameChoice[Math.floor(Math.random()*gameChoice.length)]
         setComputer(comChoice);   // computer value 
-
+ 
 
         funSandeep(choice,comChoice );
      }
