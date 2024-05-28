@@ -5,6 +5,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Sec1 } from './components/Sec1';
 import { Game } from './components/Game';
+import { Demo } from './components/Demo';
 
 function App() {
   const[dark,setDark] = useState(false);
@@ -26,6 +27,8 @@ function App() {
 
    
       <Game/>
+
+      <Demo/>
 
     </div>
   )

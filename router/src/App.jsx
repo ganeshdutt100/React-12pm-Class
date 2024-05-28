@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
-// npm i react-router-dom   
+// npm i react-router-dom
 
 import "./App.css";
 import { About } from "./components/About";
@@ -22,15 +22,14 @@ function App() {
   return (
     <>
       <Router>
-  
         <Navbar />
 
         <Routes>
-           <Route path="/home" element={<Home/>}></Route>
-           <Route path="/about" element={<About/>}></Route>
-           <Route path="/contact" element={<Contact/>}></Route>
-           <Route path="/sidebar" element={<Offcanvas/>}></Route>
-           <Route path="/web" element={<Website/>}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/sidebar" element={<Offcanvas />}></Route>
+          <Route path="/web" element={<Website />}></Route>
         </Routes>
       </Router>
     </>
