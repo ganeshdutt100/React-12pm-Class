@@ -20,7 +20,7 @@ function App() {
   }, []); // load
 
   useEffect(() => {
-    alert("i am changed ");
+    alert(` current value  : ${count} `);
   }, [count]);
 
   return (
