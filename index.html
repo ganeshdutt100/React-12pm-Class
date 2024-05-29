@@ -5,10 +5,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- FontAwesome 6.2.0 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- (Optional) Use CSS or JS implementation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+    integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.215);
+      color: white;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      backdrop-filter: blur(20px);
+      position: fixed;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 20px;
+    }
+
+    .laptopSize {
+      display: none;
+      gap: 20px;
+      list-style-type: none;
+    }
+
+    .bar {
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .phoneSize {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      height: 90vh;
+      width: 300px;
+      list-style-type: none;
+      background-color: rgb(0, 0, 0);
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      padding-top: 50px;
+      gap: 20px;
+
+    }
+
+    .phoneSize li {
+      cursor: pointer;
+    }
+
+    .section {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .section img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media only screen and (min-width:700px) {
+      .laptopSize {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+      }
+
+      .bar {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <H1>I am Div</H1>
+  <nav>
+    <div class="logo">logo</div>
+    <div class="lists">
+
+
+      <ul class="laptopSize">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Project</li>
+        <li>Blog</li>
+      </ul>
+
+      <ul class="phoneSize">
+        <li onclick="hide()"><i class="fa-solid fa-xmark"></i></li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Project</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+    <div class="bar" onclick="show()"><i class="fa-solid fa-bars"></i></div>
+  </nav>
+  <div class="section">
+    <img
+      src="https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1716966315~exp=1716969915~hmac=e1c341e572acfb68462bbb1fe7e245e51a06a2719b2a4822002f07d1e18a8289&w=740"
+      alt="">
+  </div>
+
+  <script>
+    function show() {
+      let sidebar = document.querySelector('.phoneSize');
+      sidebar.style.display = 'flex'
+    }
+    function hide() {
+      let sidebar = document.querySelector('.phoneSize');
+      sidebar.style.display = 'none'
+    }
+
+  </script>
 </body>
 
 </html>
