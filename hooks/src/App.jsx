@@ -1,21 +1,25 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 import "./App.css";
-import { UseRef } from "./Components/UseRef";
+import { UseRefClass2 } from "./Components/UseRefClass2";
+// import { UseRef } from "./Components/UseRef";
 // import { UseEffect } from "./Components/UseEffect";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // let sandeep = 0;
+  // const [count, setCount] = useState(0);
 
   // useEffect(() => {
-  //   alert(`i am changed :  ${count}`);
-  // }, [count]);
+  //   sandeep = sandeep + 2;
+  //   alert(`i am changed :  ${sandeep}`);
+  // });
   return (
     <>
-      <h1>hello world</h1>
-      <button onClick={() => setCount(count + 1)}>{count}</button>
+      {/* <h1>hello world</h1>
+      <button onClick={() => setCount(count + 1)}>{count}</button> */}
       {/* <UseEffect /> */}
-      <UseRef />
+      {/* <UseRef /> */}
+      <UseRefClass2 />
     </>
   );
 }
