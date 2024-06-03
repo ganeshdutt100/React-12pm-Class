@@ -2,6 +2,7 @@
 
 import "./App.css";
 import { UseRefClass2 } from "./Components/UseRefClass2";
+import { UseRefClass3 } from "./Components/UseRefClass3";
 // import { UseRef } from "./Components/UseRef";
 // import { UseEffect } from "./Components/UseEffect";
 
@@ -19,7 +20,8 @@ function App() {
       <button onClick={() => setCount(count + 1)}>{count}</button> */}
       {/* <UseEffect /> */}
       {/* <UseRef /> */}
-      <UseRefClass2 />
+      {/* <UseRefClass2 /> */}
+      <UseRefClass3 />
     </>
   );
 }
