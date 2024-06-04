@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Navbar = (props) => {
+export const Navbar = () => {
   return (
     <>
-      <nav className={`navbar navbar-expand-lg navbar-${props.navSan}`}>
+      <nav className={`navbar navbar-expand-lg navbar-dark  `}>
         <div className="container-fluid">
           <a className="navbar-brand d-flex gap-3" href="#">
             {/* navbarBar */}
