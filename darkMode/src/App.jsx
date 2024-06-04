@@ -8,21 +8,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { About } from "./components/About";
 
 function App() {
-  const [mode, setMode] = useState("light");
-
-  const toggleDarkMode = () => {
+  const [mode, setMode] = useState("light"); // Whether dark mode is enabled or not
+  const toggleMode = () => {
     if (mode == "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "Black";
+      document.body.style.backgroundColor = "black";
       document.body.style.color = "white";
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
     }
   };
-
   return (
     <>
-      <Navbar mode={mode} toggleDarkMode={toggleDarkMode} />
+      <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
       <Home />
-      <About />
+      <About mode={mode} />
     </>
   );
 }
