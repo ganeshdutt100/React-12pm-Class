@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export const CopyCode = () => {
   const [text, setText] = useState("");
+  const inuptRef = useRef(null);
 
   const uppercase = () => {
     let textValue = text.toUpperCase();
@@ -9,18 +10,25 @@ export const CopyCode = () => {
   };
 
   const CopyCode = () => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        alert("text copied successfully");
-      })
-      .catch(() => {
-        alert(" text not copied ");
-      });
+    // navigator.clipboard
+    //   .writeText(text)
+    //   .then(() => {
+    //     alert("text copied successfully");
+    //   })
+    //   .catch(() => {
+    //     alert(" text not copied ");
+    //   });
+    if (inuptRef.current) {
+      inuptRef.current.select();
+      document.execCommand("copy");
+
+      alert("text copied successfully");
+    }
   };
   return (
     <div>
       <textarea
+        ref={inuptRef}
         name=""
         id=""
         value={text}
