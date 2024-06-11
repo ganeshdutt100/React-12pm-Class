@@ -25,7 +25,7 @@ function App() {
       {/* <UseRefClass2 /> */}
       {/* <UseRefClass3 /> */}
 
-      <counterContext.Provider value={count}>
+      <counterContext.Provider value={{ count, setCount }}>
         <button onClick={() => setCount(count + 1)}>Button : {count}</button>
 
         {/* <div>Tanishka : {count}</div> */}
