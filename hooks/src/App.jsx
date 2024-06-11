@@ -6,6 +6,7 @@ import { UseRefClass2 } from "./Components/UseRefClass2";
 import { UseRefClass3 } from "./Components/UseRefClass3";
 // import { UseRef } from "./Components/UseRef";
 // import { UseEffect } from "./Components/UseEffect";
+import { counterContext } from "./contextAPI/Context";
 
 function App() {
   // let sandeep = 0;
@@ -23,10 +24,13 @@ function App() {
       {/* <UseRef /> */}
       {/* <UseRefClass2 /> */}
       {/* <UseRefClass3 /> */}
-      <button onClick={() => setCount(count + 1)}>Button : {count}</button>
 
-      {/* <div>Tanishka : {count}</div> */}
-      <Context count={count} />
+      <counterContext.Provider value={count}>
+        <button onClick={() => setCount(count + 1)}>Button : {count}</button>
+
+        {/* <div>Tanishka : {count}</div> */}
+        <Context />
+      </counterContext.Provider>
     </>
   );
 }

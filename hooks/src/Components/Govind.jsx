@@ -1,11 +1,11 @@
 import React from "react";
 import { Sandeep } from "./Sandeep";
 
-export const Govind = ({ count }) => {
+export const Govind = () => {
   return (
     <>
       <div>Govind</div>
-      <Sandeep count={count} />
+      <Sandeep />
     </>
   );
 };
