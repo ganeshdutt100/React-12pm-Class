@@ -23,8 +23,8 @@ export const Class3 = () => {
     <div className=" bg-dark-subtle py-4" style={{ width: "300px" }}>
       <input type="text" disabled className=" fs-4 rounded" />
       <div className=" d-flex flex-wrap gap-5 px-4 py-3 justify-content-around">
-        {buttonArray.map((x) => (
-          <button>{x}</button>
+        {buttonArray.map((surya) => (
+          <button>{surya}</button>
         ))}
         {/* <button>1</button>
         <button>2</button>
